@@ -1,5 +1,4 @@
 
-
 let A = [[1,1,2],[4,0,3],[5,1,2]];
 let I = [[1,0,0],[0,1,0],[0,0,1]];
 
@@ -34,11 +33,9 @@ export function gauss(A, I) {
       }
       A[i][k] = 0;
     }
-    printMatrix(A, rows, cols);
   }
   
 }
-
 
 
 function det (A, rows, cols) {
@@ -47,6 +44,15 @@ function det (A, rows, cols) {
   return det;
 }
 
-export function addition (a, b) {
-  return a+b;
-}
+export function printMatrix(A) {
+  let output = `            
+   \\begin{equation} \\left( \\begin{array}{ccc|ccc} 
+    ${A[0][0]} & ${A[0][1]} & ${A[0][2]} & 1 & 0 & 0\\\\
+    ${A[1][0]} & ${A[1][1]} & ${A[1][2]} & 0 & 1 & 0\\\\
+    ${A[2][0]} & ${A[2][1]} & ${A[2][2]} & 0 & 0 & 1\\\\
+   \\end{array} \\right) \\end{equation}`;
+    // In JS we use \ before a special character as \b to mark 
+  //   that it's not a special character (in this case \begin)
+  matrix.innerText = output;
+  MathJax.typeset([matrix]);
+  }

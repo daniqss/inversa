@@ -38,14 +38,39 @@
         <div>
             <input type="button" id = "submitButton">
         </div>
-        <div id="matrix">
-          $$\begin{equation} \left( \begin{array} 
-          1 & 0 & 0\\
-          0 & 1 & 0\\
-          0 & 0 & 1\\
-          \end{array} \right) \end{equation}$$
+        <div id="matrix" class="MathJax-script">
+          
+          \begin{equation} \left( \begin{array}{ccc|ccc} 
+          1 & 2 & 3 & 1 & 0 & 0\\
+          1 & 2 & 3 & 0 & 1 & 0\\
+          1 & 2 & 3 & 0 & 0 & 1\\
+         \end{array} \right) \end{equation}
+          
+        </div>
+        <br><br><br><br><br><br><br>
+        <div>
+          \begin{equation}
+          \begin{aligned}
+          \begin{pmatrix}
+          1 & 2 & 3 \\
+          4 & 5 & 6 \\
+          7 & 8 & 9
+          \end{pmatrix}
+          \begin{matrix}
+          
+          \longrightarrow \\
+          R_2 \leftarrow R_2 - 2R_1 \\
+          
+          \end{matrix}
+          \begin{pmatrix}
+          1 & 2 & 3 \\
+          2 & 1 & 0 \\
+          7 & 8 & 9
+          \end{pmatrix}
+          \end{aligned}
+          \end{equation}
         </div>
     </main>
-    <script src="./main.js"></script>
+    <script src="./main.js" type="module"></script>
 </body>
 </html>
