@@ -1,3 +1,50 @@
-.input {
-    
+body {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-family: 'Rubik', sans-serif;
 }
+
+
+nav {
+    background-color: red;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 3px;
+}
+
+main {
+    padding: 10px;
+    display: grid;
+    place-items: center;
+}
+
+section {
+    background-color: rgb(182, 182, 182);
+    border-radius: 5px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10%;
+}
+input[type="number"] {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    color: #333;
+    width: 200px;
+    height: 30px;
+}
+#submitButton {
+    width: 70%;
+    height: 100%;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+
+}
+
+td[colspan="3"] {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+  

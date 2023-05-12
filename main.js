@@ -1,28 +1,36 @@
- import {printMatrix, gauss} from "./maths.js"
+ import {printMatrix, gauss, dete} from './maths.js'
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Obtener la tabla y las celdas de la misma
+
   const table = document.getElementById('table');
   const submitButton = document.getElementById('submitButton');
   const matrix = document.getElementById('matrix');
+  let order = 3;
 
-  // Crear una matriz 3x3
+  const I = [
+    [1, 0, 0],
+    [0, 1, 0],
+    [0, 0, 1]
+    ];
   let A = [
-    [null, null, null],
-    [null, null, null],
-    [null, null, null],
+    [1, 1, 1],
+    [2, 2, 2],
+    [3, 4, 3]
   ];
 
-  submitButton.addEventListener("click", () => {
-    for (let i = 0; i < table.rows.length; i++) {
-      for (let j = 0; j < table.rows[i].cells.length; j++) {
-        A[i][j] = table.rows[i].cells[j].getElementsByTagName('input')[0].value;
-      }
-      // Nested for where we access to the first element input value (there can be several inputs un the same cell)
-      // in row i and cell j to store it in our matrix
-    }
+  printMatrix(A, I);
 
-    printMatrix(A);
+  submitButton.addEventListener("click", (event) => {
+    for (let i = 0; i < order; i++) {
+      for (let j = 0; j < order; j++) {
+        A[i][j] = table.rows[i].cells[j].getElementsByTagName('input')[0].value;
+        console.log(`${i} ${j} insertion`);
+        }
+      }
+      // Nested for where we access to the first element input value (there can be several inputs in the same cell)
+      // in row i and cell j to store it in our matrix
+
+    gauss(A, I);
   });
 
 
